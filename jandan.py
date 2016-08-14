@@ -67,24 +67,12 @@ html = responsehtml(url)
 
 while 1:
 	nexturl = bs(html)
-	html = responsehtml(nexturl)
-	print(nexturl)
 	if not nexturl:
 		break
+	html = responsehtml(nexturl)
+	print(nexturl)
+	
 
 print ("main thread exit!")
 
 
-'''
-print (type(html))
-#html = html.read()
-print (type(html))
-
-html = str(html)
-print (type(html))
-
-
-#print (html)
-#jpgpathname = 'D:\\jandan\\'+time.strftime("%Y-%m-%d", time.localtime())+".jpg"
-#urllib.request.urlretrieve(jpgurl, jpgpathname)
-'''
